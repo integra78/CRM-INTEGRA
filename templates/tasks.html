@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Tareas</title>
+<h1>Tareas</h1>
+<form method="post">
+    <input type="text" name="task" placeholder="Nueva tarea" required>
+    <button type="submit">Agregar</button>
+</form>
+<ul>
+{% for t in tasks %}
+  <li>{{ t.task }} - {{ t.status }}</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>

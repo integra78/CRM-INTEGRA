@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Clientes</title>
+<h1>Clientes</h1>
+<form method="post">
+    <input type="text" name="client" placeholder="Nuevo cliente" required>
+    <button type="submit">Agregar</button>
+</form>
+<ul>
+{% for c in clients %}
+  <li>{{ c.name }}</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>

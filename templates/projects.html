@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Proyectos</title>
+<h1>Proyectos</h1>
+<form method="post">
+    <input type="text" name="project" placeholder="Nuevo proyecto" required>
+    <button type="submit">Agregar</button>
+</form>
+<ul>
+{% for p in projects %}
+  <li>{{ p.name }}</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>
