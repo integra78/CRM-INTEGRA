@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Dashboard</title>
+<h1>Bienvenido {{ user }}</h1>
+<h2>Tareas</h2>
+<ul>
+{% for t in tasks %}
+  <li>{{ t.task }} - {{ t.status }}</li>
+{% endfor %}
+</ul>
+<h2>Clientes</h2>
+<ul>
+{% for c in clients %}
+  <li>{{ c.name }}</li>
+{% endfor %}
+</ul>
+<h2>Proyectos</h2>
+<ul>
+{% for p in projects %}
+  <li>{{ p.name }}</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('logout') }}">Cerrar sesión</a>
